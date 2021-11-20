@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvc_assetid"
+                android:layout_width="100dp"
+                android:color="?attr/colorPrimary"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvc_assetname"
+                android:layout_width="150dp"
+                android:color="?attr/colorPrimary"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvc_kodeunit"
+                android:layout_width="80dp"
+                android:color="?attr/colorPrimary"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvc_koderuangan"
+                android:layout_width="150dp"
+                android:color="?attr/colorPrimary"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvc_keterangan"
+                android:layout_width="160dp"
+                android:color="?attr/colorPrimary"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvc_status"
+                android:layout_width="130dp"
+                android:color="?attr/colorPrimary"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </TableRow>
+    </TableLayout>

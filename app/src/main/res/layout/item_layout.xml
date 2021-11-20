@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*"
+    android:padding="8dp">
+    <TableRow>
+
+        <TextView
+            android:id="@+id/tv_koderuangan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:color="?attr/colorPrimary"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_assetid"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:color="?attr/colorPrimary"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_barcode"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:color="?attr/colorPrimary"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_assetname"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:color="?attr/colorPrimary"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_tahun"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:color="?attr/colorPrimary"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Basic Application</string>
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="bRegister">Register</string>
+    <string name="bLogin">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--TODO: Additional -->
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="attribute_img">ImageView Header</string>
+    <string name="menuSO">AssetSO</string>
+    <string name="menuConfirm">ConfirmSO</string>
+    <string name="menuAsset">AllAsset</string>
+    <string name="logo_ptpr">LOGO PERTAMINA RETAIL</string>
+    <string name="pilih_ruangan">Pilih Ruangan</string>
+    <string name="pilih_unit">Pilih Unit</string>
+    <string name="login_text">Login Page</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome_messages">Welcome, %1$s!</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="welcome_text">Welcome!</string>
+    <string name="app_logo">App Logo</string>
+    <string name="input_data">INPUT DATA</string>
+    <string name="keterangan_edit_text">Keterangan</string>
+    <string name="barcode_no_edit_text">Barcode No</string>
+
+    <string name="keterangan_col">Keterangan</string>
+    <string name="ruangan_col">Ruangan</string>
+    <string name="kode_unit_col">Kode Unit</string>
+    <string name="kode_ruangan_col">Kode Ruangan</string>
+    <string name="asset_id_col">Asset ID</string>
+    <string name="barcode_no_col">Barcode No</string>
+    <string name="asset_name_col">Asset Name</string>
+    <string name="tahun_perolehan_col">Tahun Perolehan</string>
+    <string name="status_col">Status</string>
+
+    <string name="show_data">Show Data</string>
+    <string name="homepage_success_login">Homepage success login</string>
+    <string name="show_password">Show Password</string>
+    <string name="check_and_confirm_data">Check and Confirm Data</string>
+    <string name="tab_text_1">Scanner</string>
+    <string name="tab_text_2">Manual Input</string>
+    <string name="show_scanner">Show Scanner</string>
+    <string name="back">Back to Main Menu</string>
+    <string name="success">Input Data Berhasil!</string>
+</resources>
