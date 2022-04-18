@@ -34,7 +34,8 @@
             android:theme="@style/Theme.BasicApplication.NoActionBar" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.BasicApplication.NoActionBar">
+            android:theme="@style/Theme.BasicApplication.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,9 +51,9 @@
             android:resource="@array/preloaded_fonts" />
     </application>
 
-    <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-feature android:name="android.hardware.camera" />
 
 </manifest>
