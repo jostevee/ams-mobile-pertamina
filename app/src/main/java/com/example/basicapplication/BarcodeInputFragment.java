@@ -29,7 +29,7 @@ public class BarcodeInputFragment extends Fragment {
     private static final String TAG = "BarcodeInput";
     private PageViewModel pageViewModel;
     public EditText txtBarcode;
-    String textBarcode;
+    // String textBarcode;
 
     public static BarcodeInputFragment newInstance() {
         return new BarcodeInputFragment();
@@ -123,6 +123,9 @@ public class BarcodeInputFragment extends Fragment {
     }
     */
 
+    /*
     public void updateNumber(){
         txtBarcode.getText().clear();
-    }}
+    }
+     */
+}

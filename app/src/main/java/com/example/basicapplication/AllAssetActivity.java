@@ -8,8 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -25,9 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 public class AllAssetActivity extends MainMenu {
     private RecyclerView recyclerView;
     private final List<AssetModel> modelList = new ArrayList<>();
@@ -42,8 +41,8 @@ public class AllAssetActivity extends MainMenu {
     ArrayAdapter<String> ruanganAdapter;
     SharedPreferences sharedPreferences;
     String savedUser;
-    ProgressBar progressBar;
-    TextView profiles;
+    // ProgressBar progressBar;
+    // TextView profiles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,18 +60,15 @@ public class AllAssetActivity extends MainMenu {
             unitRequest(savedUser);
         }
 
-        btnGen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
+        btnGen.setOnClickListener(v -> {
+            progressBar.setVisibility(View.VISIBLE);
 
-                modelList.clear();
-                int getValueRuangan = spinRuangan.getSelectedItemPosition();
-                String selectedRuangan = String.valueOf(ruanganListValue.get(getValueRuangan));
-                int getValueUnit = spinUnit.getSelectedItemPosition();
-                String selectedUnit = String.valueOf(unitListValue.get(getValueUnit));
-                jsonrequest(selectedUnit, selectedRuangan);
-            }
+            modelList.clear();
+            int getValueRuangan = spinRuangan.getSelectedItemPosition();
+            String selectedRuangan = String.valueOf(ruanganListValue.get(getValueRuangan));
+            int getValueUnit = spinUnit.getSelectedItemPosition();
+            String selectedUnit = String.valueOf(unitListValue.get(getValueUnit));
+            jsonrequest(selectedUnit, selectedRuangan);
         });
 
         spinUnit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -96,29 +92,26 @@ public class AllAssetActivity extends MainMenu {
 
     private void unitRequest(String userid) {
         String jsonUrl = "http://203.77.249.186:8031/Asset/GetUserUnit?userid="+userid;
-        JsonArrayRequest request = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                JSONObject jsonObject;
-                unitList.add("Select Unit");
-                unitListValue.add("0");
+        JsonArrayRequest request = new JsonArrayRequest(jsonUrl, response -> {
+            JSONObject jsonObject;
+            unitList.add("Select Unit");
+            unitListValue.add("0");
 
-                for (int i = 0; i < response.length(); i++) {
-                    try {
-                        jsonObject = response.getJSONObject(i);
-                        String KodeUnit = jsonObject.getString("KodeUnit");
-                        String NamaUnit = jsonObject.getString("NamaUnit");
+            for (int i = 0; i < response.length(); i++) {
+                try {
+                    jsonObject = response.getJSONObject(i);
+                    String KodeUnit = jsonObject.getString("KodeUnit");
+                    String NamaUnit = jsonObject.getString("NamaUnit");
 
-                        unitList.add(NamaUnit);
-                        unitListValue.add(KodeUnit);
+                    unitList.add(NamaUnit);
+                    unitListValue.add(KodeUnit);
 
-                        unitAdapter = new ArrayAdapter<>(AllAssetActivity.this,
-                                android.R.layout.simple_spinner_item, unitList);
-                        unitAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        spinUnit.setAdapter(unitAdapter);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+                    unitAdapter = new ArrayAdapter<>(AllAssetActivity.this,
+                            android.R.layout.simple_spinner_item, unitList);
+                    unitAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinUnit.setAdapter(unitAdapter);
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
             }
         }, new Response.ErrorListener() {

@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.ksoap2.SoapEnvelope;
@@ -24,14 +26,11 @@ import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText eUsername;
     private EditText ePassword;
     private Button bLogin;
-    private Button btnLogin;
     private ProgressDialog progressDialog;
     private VideoView videoview;
     private TextInputLayout eUsernameLayout;
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         eUsernameLayout = findViewById(R.id.etUsernameLayout);
         ePasswordLayout = findViewById(R.id.etPasswordLayout);
         bLogin = findViewById(R.id.bLogin);
-        btnLogin = findViewById(R.id.btnLogin);
+        Button btnLogin = findViewById(R.id.btnLogin);
 
         // Start animation
         startAnimations();
@@ -111,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferencesEditor = sharedPreferences.edit();
 
         if (sharedPreferences != null) {
-            String savedUsername = sharedPreferences.getString("Username", "");
-            String savedPassword = sharedPreferences.getString("Password", "");
+            // String savedUsername = sharedPreferences.getString("Username", "");
+            // String savedPassword = sharedPreferences.getString("Password", "");
             /*
             try {
                 //Intent intent = new Intent(MainActivity.this, MainMenu.class);

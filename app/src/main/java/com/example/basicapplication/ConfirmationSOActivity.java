@@ -13,7 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -31,13 +33,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class ConfirmationSOActivity extends MainMenu {
     public RecyclerView recyclerView;
@@ -296,10 +294,12 @@ public class ConfirmationSOActivity extends MainMenu {
                 return "application/json; charset=utf-8";
             }
 
+            /*
             @Override
             public byte[] getBody() throws AuthFailureError {
                 return requestBody == null ? null : requestBody.getBytes(StandardCharsets.UTF_8);
             }
+             */
 
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {

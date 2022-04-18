@@ -1,9 +1,10 @@
 package com.example.basicapplication;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,12 +20,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.FragmentResultListener;
+import androidx.viewpager2.widget.ViewPager2;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.budiyev.android.codescanner.CodeScanner;
-import com.budiyev.android.codescanner.CodeScannerView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -36,18 +41,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentResultListener;
-import androidx.viewpager2.widget.ViewPager2;
-
-import static android.content.Context.MODE_PRIVATE;
-
 public class AssetSOFragment extends MainFragment {
-    public static final int CAMERA_PERMISSION_CODE = 100;
+    // public static final int CAMERA_PERMISSION_CODE = 100;
     public static List<AssetConfirmModel> modelList = new ArrayList<>();
     private Spinner spinUnit, spinRuangan;
     private RequestQueue mQueue;
@@ -55,8 +50,8 @@ public class AssetSOFragment extends MainFragment {
 
     // Get Scanner View
     BarcodeScannerShowActivity barcodeScannerShowActivity = new BarcodeScannerShowActivity();
-    CodeScanner codeScanner = this.barcodeScannerShowActivity.getCodeScanner();
-    CodeScannerView scannerView = this.barcodeScannerShowActivity.getScannerView();
+    // CodeScanner codeScanner = this.barcodeScannerShowActivity.getCodeScanner();
+    // CodeScannerView scannerView = this.barcodeScannerShowActivity.getScannerView();
 
     ArrayList<String> unitList = new ArrayList<>();
     ArrayList<String> unitListValue = new ArrayList<>();
@@ -100,9 +95,11 @@ public class AssetSOFragment extends MainFragment {
     //ProgressBar pb;
     //EditText txtBarcode;
 
+    /*
     public static AssetSOFragment newInstance() {
         return new AssetSOFragment();
     }
+     */
 
     @Nullable
     @Override
@@ -186,7 +183,7 @@ public class AssetSOFragment extends MainFragment {
                     Cursor data = myDB.getAssetbyBarcode(barcode, selectedUnit, selectedRuangan);
                     if (data.getCount()!= 0){
                         while(data.moveToNext()){
-                            txtNamaAsset.setText(data.getString(4).toString());
+                            txtNamaAsset.setText(data.getString(4));
                         }
                     } else {
                         txtNamaAsset.setText("Not Found");
@@ -411,6 +408,7 @@ public class AssetSOFragment extends MainFragment {
         */
     }
 
+    /*
     public void checkPermission(String permission, int requestCode) {
         if (ContextCompat.checkSelfPermission(requireContext(), permission)
                 == PackageManager.PERMISSION_DENIED) {
@@ -421,6 +419,7 @@ public class AssetSOFragment extends MainFragment {
             //codeScanner.startPreview();
         }
     }
+     */
 
     private void jsonrequest(String kodeunit, String koderuangan) {
         String jsonUrl = "http://203.77.249.186:8031/Asset/ListAssetbyUserLogin?KodeUnit=" + kodeunit + "&KodeRuangan=" + koderuangan;
@@ -529,8 +528,9 @@ public class AssetSOFragment extends MainFragment {
         mQueue.add(request);
     }
 
+    /*
     private void startCounting() {
-        /* Called when the activity is first created. */
+        /* Called when the activity is first created.
         Thread splashThread = new Thread() {
             @Override
             public void run() {
@@ -550,4 +550,5 @@ public class AssetSOFragment extends MainFragment {
         };
         splashThread.start();
     }
+     */
 }

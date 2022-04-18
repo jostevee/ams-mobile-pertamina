@@ -13,6 +13,7 @@ public class AssetConfirmModel {
 
     }
 
+    /*
     public AssetConfirmModel(String kodeUnit, String kodeRuangan, String assetId, String assetName, String kodeBarcode, String keterangan, String status) {
         KodeUnit = kodeUnit;
         KodeRuangan = kodeRuangan;
@@ -22,6 +23,7 @@ public class AssetConfirmModel {
         Keterangan = keterangan;
         Status = status;
     }
+     */
 
     public String getKodeUnit() {
         return KodeUnit;
@@ -55,7 +57,7 @@ public class AssetConfirmModel {
         AssetName = assetName;
     }
 
-    public String getKodeBarcode() { return KodeBarcode; }
+    // public String getKodeBarcode() { return KodeBarcode; }
 
     public void setKodeBarcode(String kodeBarcode) { KodeBarcode = kodeBarcode; }
 

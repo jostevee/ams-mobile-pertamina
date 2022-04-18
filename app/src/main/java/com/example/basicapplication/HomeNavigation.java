@@ -1,22 +1,12 @@
 package com.example.basicapplication;
 
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +17,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class HomeNavigation extends AppCompatActivity {
 
@@ -45,9 +37,9 @@ public class HomeNavigation extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     String username;
 
-    //Toolbar toolbar;
-    //private TextView UserName;
-    //private InterstitialAd mInterstitialAd; //Kalo ada Interstitial Ads!
+    // Toolbar toolbar;
+    // private TextView UserName;
+    // private InterstitialAd mInterstitialAd; //Kalo ada Interstitial Ads!
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +99,7 @@ public class HomeNavigation extends AppCompatActivity {
     }
 
     // ======================================== Rounded Image function ======================================== //
+    /*
     private Bitmap getCircleBitmap(Bitmap bitmap) {
         final Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
                 bitmap.getHeight(), Bitmap.Config.ARGB_8888);
@@ -129,6 +122,7 @@ public class HomeNavigation extends AppCompatActivity {
 
         return output;
     }
+     */
     // ======================================== Rounded Image function ======================================== //
 
     @Override

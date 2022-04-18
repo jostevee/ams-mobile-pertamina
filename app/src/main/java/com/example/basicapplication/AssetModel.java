@@ -10,6 +10,7 @@ public class AssetModel {
     public AssetModel(){
     }
 
+    /*
     public AssetModel(String koderuangan, String assetid, String barcode, String assetname, String tahunperolehan) {
         this.koderuangan = koderuangan;
         this.assetid = assetid;
@@ -17,6 +18,8 @@ public class AssetModel {
         this.assetname = assetname;
         this.tahunperolehan = tahunperolehan;
     }
+     */
+
     public String getKodeRuangan(){return koderuangan;}
 
     public void setKodeRuangan(String koderuangan){this.koderuangan = koderuangan;}

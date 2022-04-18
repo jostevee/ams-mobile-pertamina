@@ -7,9 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.budiyev.android.codescanner.CodeScanner;
-import com.budiyev.android.codescanner.CodeScannerView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -29,8 +26,8 @@ public class BarcodeScannerFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private static final String TAG = "BarcodeScanner";
-    private CodeScanner mCodeScanner;
-    private CodeScannerView scannerView;
+    // private CodeScanner mCodeScanner;
+    // private CodeScannerView scannerView;
     private PageViewModel pageViewModel;
     private Button openBarcode;
 

@@ -1,5 +1,7 @@
 package com.example.basicapplication;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +18,11 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -34,17 +40,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class ConfirmationSOFragment extends MainFragment {
     public RecyclerView recyclerView;
@@ -352,10 +350,12 @@ public class ConfirmationSOFragment extends MainFragment {
                 return "application/json; charset=utf-8";
             }
 
+            /*
             @Override
             public byte[] getBody() throws AuthFailureError {
                 return requestBody.getBytes(StandardCharsets.UTF_8);
             }
+             */
 
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {

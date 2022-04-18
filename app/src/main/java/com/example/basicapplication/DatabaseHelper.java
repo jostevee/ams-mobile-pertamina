@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(dropTable);
     }
 
-    public boolean addData(String unitid, String koderuangan, String assetid, String namaasset, String kodebarcode, String ket, String status){
+    public void addData(String unitid, String koderuangan, String assetid, String namaasset, String kodebarcode, String ket, String status){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("UNITID", unitid);
@@ -39,7 +39,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("STATUS", status);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
-        return result != -1;
     }
 
     public Cursor getAssetLists(String unit, String ruangan){
@@ -74,10 +73,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
          return result != -1;
      }
 
-    public boolean deleteData(String unit, String ruangan){
+    public void deleteData(String unit, String ruangan){
         SQLiteDatabase db = this.getReadableDatabase();
 
         long result = db.delete(TABLE_NAME,"UNITID =? AND KODERUANGAN =?",new String[] {unit, ruangan});
-        return result != -1;
     }
 }
