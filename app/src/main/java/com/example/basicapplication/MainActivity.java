@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         eUsernameLayout = findViewById(R.id.etUsernameLayout);
         ePasswordLayout = findViewById(R.id.etPasswordLayout);
         bLogin = findViewById(R.id.bLogin);
-        Button btnLogin = findViewById(R.id.btnLogin);
+        // Button btnLogin = findViewById(R.id.btnLogin);
 
         // Start animation
         startAnimations();
@@ -109,10 +109,11 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
         sharedPreferencesEditor = sharedPreferences.edit();
 
+        /*
         if (sharedPreferences != null) {
             // String savedUsername = sharedPreferences.getString("Username", "");
             // String savedPassword = sharedPreferences.getString("Password", "");
-            /*
+
             try {
                 //Intent intent = new Intent(MainActivity.this, MainMenu.class);
                 Intent intent = new Intent(MainActivity.this, HomeNavigation.class);
@@ -120,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
             } finally {
                 MainActivity.this.finish();
             }
-            */
         }
+        */
 
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override

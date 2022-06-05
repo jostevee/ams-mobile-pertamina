@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -41,8 +42,8 @@ public class AllAssetActivity extends MainMenu {
     ArrayAdapter<String> ruanganAdapter;
     SharedPreferences sharedPreferences;
     String savedUser;
-    // ProgressBar progressBar;
-    // TextView profiles;
+    ProgressBar progressBar;
+    TextView profiles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

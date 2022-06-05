@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/SteveLB3/AndroidStudioProjects/AndroidStudioPMMB/app/src/main/res/drawable/loginmenu.xml" value="0.265" />
+        <entry key="..\:/Users/SteveLB3/AndroidStudioProjects/AndroidStudioPMMB/app/src/main/res/layout-v21/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/SteveLB3/AndroidStudioProjects/AndroidStudioPMMB/app/src/main/res/layout/activity_main.xml" value="0.18" />
+      </map>
+    </option>
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
     <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />
